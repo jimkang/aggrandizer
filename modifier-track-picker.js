@@ -82,12 +82,22 @@ function createModifierTrackPicker(probable) {
     });
   }
 
-  function pickRandomModifierTrack(modifierKind) {
+  function pickRandomModifierTrack(modifierKind, base) {
     var track;
     var trackComboTable = trackComboTables[modifierKind];
     if (trackComboTable) {
       var trackName = trackComboTable.roll();
       track = tracks[trackName];
+    }
+
+    var lowerCaseBase = base.toLowerCase();
+
+    function doesNotContainBase(modifier) {
+      return modifier.toLowerCase().indexOf(lowerCaseBase) === -1;
+    }
+
+    if (track) {
+      track = track.filter(doesNotContainBase);
     }
     return track;
   }

@@ -119,22 +119,20 @@ function createAggrandizer(opts) {
     };
 
     for (var i = 0; i < opts.iterations; ++i) {      
-      updateSlotStates(slots);
-
+      updateSlotStates(slots, baseTitle);
       var title = {
         preprefix: slots.preprefix.getModifier(),
         prefix: slots.prefix.getModifier(),
         suffix: slots.suffix.getModifier(),
         base: baseTitle
       };
-
       titles.push(title);
     }
 
     return titles;
   }
 
-  function updateSlotStates(slots) {
+  function updateSlotStates(slots, base) {
     var prefixState = slots.prefix.getState();
     var preprefixState = slots.preprefix.getState();
     var suffixState = slots.suffix.getState();
@@ -151,13 +149,13 @@ function createAggrandizer(opts) {
       if (probable.roll(3) > 0) {
         // 2/3 chance of activating the prefix slot, 1/3 suffix.
         if (probable.roll(3) > 0) {
-          track = pickRandomModifierTrack('prefix');
+          track = pickRandomModifierTrack('prefix', base);
           if (track) {
             slots.prefix.activate(track);
           }
         }
         else {
-          track = pickRandomModifierTrack('suffix');
+          track = pickRandomModifierTrack('suffix', base);
           if (track) {
             slots.suffix.activate(track);
           }
@@ -170,7 +168,7 @@ function createAggrandizer(opts) {
         // 3/5 chance of activating pre-prefix, 2/5 suffix.
         if (probable.roll(5) < 3) {
           if (preprefixState === 'none') {
-            track = pickRandomModifierTrack('preprefix');
+            track = pickRandomModifierTrack('preprefix', base);
             if (track) {
               slots.prefix.freeze();
               slots.preprefix.activate(track);
@@ -181,7 +179,7 @@ function createAggrandizer(opts) {
           if (suffixState === 'none' && 
             titleIsSuffixableWithPrefixSlot(slots.prefix)) {
 
-            track = pickRandomModifierTrack('suffix');
+            track = pickRandomModifierTrack('suffix', base);
             if (track) {
               slots.prefix.freeze();
               slots.suffix.activate(track);
@@ -199,7 +197,7 @@ function createAggrandizer(opts) {
     else if (suffixState === 'completed' && prefixState === 'none') {
       // 1/3 chance of starting prefix.
       if (probable.roll(3) === 0) {
-        slots.prefix.activate(pickRandomModifierTrack('prefix'));
+        slots.prefix.activate(pickRandomModifierTrack('prefix', base));
       }
     }
     else if (prefixState === 'completed' && suffixState === 'none') {
@@ -207,7 +205,7 @@ function createAggrandizer(opts) {
       if (titleIsSuffixableWithPrefixSlot(slots.prefix) && 
         probable.roll(3) === 0) {
 
-        slots.suffix.activate(pickRandomModifierTrack('suffix'));
+        slots.suffix.activate(pickRandomModifierTrack('suffix', base));
       }
     }
   }

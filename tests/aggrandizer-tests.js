@@ -81,6 +81,38 @@ test('Track slot', function trackSlot(t) {
   );
 });
 
+test('No redundancy', function redundancy(t) {
+  t.plan(36);
+
+  var aggrandizer = createAggrandizer({
+    probable: createProbable({
+      random: seedrandom('Lady')
+    })
+  });
+
+  var titles = aggrandizer.aggrandize({
+    baseTitle: 'Lady',
+    iterations: 12
+  });
+
+  function checkTitleForRedundancy(title) {
+    var base = title.base.toLowerCase();
+    t.ok(
+      !title.preprefix || title.preprefix.toLowerCase().indexOf(base) === -1,
+      'Preprefix ' + title.preprefix + ' is not redundant.'
+    );
+    t.ok(
+      !title.prefix || title.prefix.toLowerCase().indexOf(base) === -1,
+      'Prefix ' + title.prefix + ' is not redundant.'
+    );
+    t.ok(
+      !title.suffix || title.suffix.toLowerCase().indexOf(base) === -1,
+      'Suffix ' + title.suffix + ' is not redundant.'
+    );
+  }
+  titles.forEach(checkTitleForRedundancy);
+});
+
 test('Integration test', function runIt(t) {
   t.plan(1);
 
