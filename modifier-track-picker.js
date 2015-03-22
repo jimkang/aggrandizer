@@ -1,6 +1,6 @@
 var trackChoices = {
   primaryOnlyPrefixes: [
-    ['Expert', 'Senior', 'Professional', 'Guru'],
+    ['Expert', 'Senior', 'Professional'],
     ['Chief', 'Prime'],
     ['Master', 'Champion', "Head"],
     ['Grandmaster']
