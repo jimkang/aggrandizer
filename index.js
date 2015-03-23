@@ -222,10 +222,25 @@ function titleIsSuffixableWithPrefixSlot(prefixSlot) {
   return (prefixSlot.getTracker().getCurrent().indexOf('The Great') === -1)  
 }
 
-function formatTitle(title) {
-  var s = '';
-  var words = _.compact([title.preprefix, title.prefix, title.base, title.suffix]);
-  return words.join(' ');
+function formatTitle(genderIndex, title) {
+  var words = _.compact([
+    title.preprefix,
+    title.prefix,
+    title.base,
+    title.suffix
+  ]);
+  var genderPicker = _.curry(pickGenderInString)(genderIndex);
+  var wordsGendered =  words.map(genderPicker);
+  return wordsGendered.join(' ');
+}
+
+function pickGenderInString(genderIndex, s) {
+  var selection = s;
+  var choices = s.split('|');
+  if (genderIndex < choices.length) {
+    selection = choices[genderIndex];
+  }
+  return selection;
 }
 
 module.exports = {

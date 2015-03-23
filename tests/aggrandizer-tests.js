@@ -2,6 +2,7 @@ var test = require('tape');
 var createAggrandizer = require('../index').create;
 var seedrandom = require('seedrandom');
 var createProbable = require('probable').createProbable;
+var _ = require('lodash');
 
 test('Track slot', function trackSlot(t) {
   t.plan(9);
@@ -126,6 +127,7 @@ test('Integration test', function runIt(t) {
     iterations: 12
   });
 
-  console.log(titles.map(aggrandizer.formatTitle));
+  var formatTitleAsFemale = _.curry(aggrandizer.formatTitle)(0);
+  console.log(titles.map(formatTitleAsFemale));
   t.equal(titles.length, 12, 'Generates the right number of titles.');
 });
