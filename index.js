@@ -1,5 +1,6 @@
 var createModifierTrackPicker = require('./modifier-track-picker').create;
 var defaultProbable = require('probable');
+var _ = require('lodash');
 
 function createAggrandizer(opts) {
   var probable;
@@ -212,12 +213,19 @@ function createAggrandizer(opts) {
 
   return {
     aggrandize: aggrandize,
-    createTrackSlot: createTrackSlot
+    createTrackSlot: createTrackSlot,
+    formatTitle: formatTitle
   };
 }
 
 function titleIsSuffixableWithPrefixSlot(prefixSlot) {
   return (prefixSlot.getTracker().getCurrent().indexOf('The Great') === -1)  
+}
+
+function formatTitle(title) {
+  var s = '';
+  var words = _.compact([title.preprefix, title.prefix, title.base, title.suffix]);
+  return words.join(' ');
 }
 
 module.exports = {

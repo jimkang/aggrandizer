@@ -1,6 +1,6 @@
 {
   "name": "aggrandizer",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Progressively aggrandizes a title.",
   "main": "index.js",
   "scripts": {

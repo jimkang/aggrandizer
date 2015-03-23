@@ -1,6 +1,5 @@
 var test = require('tape');
 var createAggrandizer = require('../index').create;
-var _ = require('lodash');
 var seedrandom = require('seedrandom');
 var createProbable = require('probable').createProbable;
 
@@ -127,12 +126,6 @@ test('Integration test', function runIt(t) {
     iterations: 12
   });
 
-  console.log(titles.map(formatTitle));
+  console.log(titles.map(aggrandizer.formatTitle));
   t.equal(titles.length, 12, 'Generates the right number of titles.');
 });
-
-function formatTitle(title) {
-  var s = '';
-  var words = _.compact([title.preprefix, title.prefix, title.base, title.suffix]);
-  return words.join(' ');
-}
