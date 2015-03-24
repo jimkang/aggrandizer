@@ -2,19 +2,18 @@ var trackChoices = {
   primaryOnlyPrefixes: [
     ['Expert', 'Senior', 'Professional'],
     ['Chief', 'Prime'],
-    ['Master', 'Champion', "Head"],
-    ['Grandmaster']
+    ['Master', 'Champion'],
+    ['Grandmaster', 'Head']
   ],
   archPrefixes: [
     ['High', 'Superior'],
     ['Arch', 'Grand', 'Principal'],
-    ['Supreme'],
-    ['The Great']
+    ['The Great', 'The Number One']
   ],
   nobleSuffixes: [
-    ['Knight', 'Captain'],
-    ['Lady|Lord'],
-    ['General', 'Commander', 'Director-General', 'Overlady|Overlord'],
+    ['Knight', 'Captain', 'Ascendant'],
+    ['Lady|Lord', 'Commander', 'General'],
+    ['Supreme', 'Director-General', 'Overlady|Overlord'],
     ['Goddess|God', 'Potentate']
   ],
   windSuffixes: [
