@@ -1,0 +1,104 @@
+{
+  "masterTrackPrefixes": [
+    ["Expert", "Senior", "Professional"],
+    ["Chief", "Prime"],
+    ["Master", "Champion"],
+    ["Grandmaster", "Head"]
+  ],
+  "archPrefixes": [
+    ["High", "Superior"],
+    ["Arch", "Grand", "Principal"],
+    ["The Great", "The Number One"]
+  ],
+  "spacePrefixes": [
+    ["Moon", "Space"],
+    ["Astro", "Cosmo"],
+    ["Meteor"],
+    ["Asteroid"],
+    ["Comet"],
+    ["Star"]
+  ],
+  "tempermentPrefixes": [
+    ["Phlegmatic"],
+    ["Choleric"],
+    ["Melancholic"],
+    ["Sanguine"]
+  ],
+  "nobleSuffixes": [
+    ["Knight", "Captain", "Ascendant"],
+    ["Lady|Lord", "Commander", "General"],
+    ["Supreme", "Director-General", "Overlady|Overlord"],
+    ["Goddess|God", "Potentate"]
+  ],
+  "windSuffixes": [
+    ["of the North Wind"],
+    ["of the West Wind"],
+    ["of the South Wind"],
+    ["of the East Wind"]
+  ],
+  "seasonSuffixes": [
+    ["of Summer"],
+    ["of Autumn", "of Fall"],
+    ["of Winter"],
+    ["of Spring"],
+    ["of Flowers"]
+  ],
+  "landscapeSuffixes": [
+    ["of the Earth", "of the Firmament"],
+    ["of the Sky", "of the Heavens"],
+    ["of the Sea", "of the Æther"],
+    ["of the Stars", "of the Sea Below All Seas"]
+  ],
+  "beastSuffixes": [
+    ["of Dragons", "of Snakes", "of the Phoenix", "of Wolves"],
+    ["of Whales", "of Eagles", "of Crows", "of Owls"],
+    ["of Narwhals", "of Unicorns", "of Ravens", "of Lammergeiers"]
+  ],
+  "sunsetSuffixes": [
+    ["of the Dawn"],
+    ["of the Dusk"],
+    ["of the Twilight"]
+  ],
+  "suitSuffixes": [
+    ["of Clubs"],
+    ["of Diamonds"],
+    ["of Hearts"],
+    ["of Spades"]
+  ],
+  "cardinalVirtueSuffixes": [
+    ["of Justice"],
+    ["of Prudence"],
+    ["of Fortitude"],
+    ["of Temperance"]
+  ],
+  "foundationsOfMindfulnessSuffixes": [
+    ["of the Body"],
+    ["of Feelings"],
+    ["of the Mind"],
+    ["of Mental Objects"]
+  ],
+  "rightExertionsSuffixes": [
+    ["of the Non-Arising"],
+    ["of the Abandonment"],
+    ["of the Arising"],
+    ["of Maintenance"]
+  ],
+  "arupajhanaSuffixes": [
+    ["of Infinite Space"],
+    ["of Infinite Consciousness"],
+    ["of Infinite Nothingness"],
+    ["of Neither Perception nor Non-Perception"]
+  ],
+  "divineAbidingsSuffixes": [
+    ["of Loving-Kindness"],
+    ["of Compassion"],
+    ["of Sympathetic joy"],
+    ["of Equanimity"]
+  ],
+  "fourHorsemenSuffixes": [
+    ["of Pestilence"],
+    ["of War"],
+    ["of Famine"],
+    ["of Death"]
+  ]
+}
