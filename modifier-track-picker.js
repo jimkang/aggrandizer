@@ -1,6 +1,6 @@
 var jsonfile = require('jsonfile');
 
-var trackChoices = jsonfile.readFileSync('./data/trackchoices.json');
+var trackChoices = jsonfile.readFileSync(__dirname + '/data/trackchoices.json');
 
 var primaryPrefixProbs = {
   masterTrackPrefixes: 4,
