@@ -24,20 +24,37 @@ var trackChoices = {
   ],
   seasonSuffixes: [
     ['of Summer'],
-    ['of Autumn'],
+    ['of Autumn', 'of Fall'],
     ['of Winter'],
     ['of Spring'],
     ['of Flowers']
   ],
   landscapeSuffixes: [
-    ['of the Earth', 'of the Sky'],
+    ['of the Earth', 'of the Sky', 'of the Heavens'],
     ['of the Sea'],
     ['of the Stars']
   ],
   beastSuffixes: [
-    ['of Dragons', 'of Snakes'],
-    ['of Whales', 'of Eagles'],
-    ['of Narwhals', 'of Unicorns']
+    ['of Dragons', 'of Snakes', 'of the Phoenix', 'of Wolves'],
+    ['of Whales', 'of Eagles', 'of Crows', 'of Owls'],
+    ['of Narwhals', 'of Unicorns', 'of Ravens', 'of the Lammergeier']
+  ],
+  sunsetSuffixes: [
+    ['of the Dawn'],
+    ['of the Dusk'],
+    ['of the Twilight']
+  ],
+  suitSuffixes: [
+    ['of Clubs'],
+    ['of Diamonds'],
+    ['of Hearts'],
+    ['of Spades']
+  ],
+  cardinalVirtueSuffixes: [
+    ['of Justice'],
+    ['of Prudence'],
+    ['of Fortitude'],
+    ['of Temperance']
   ]
 };
 
@@ -56,11 +73,14 @@ function createModifierTrackPicker(probable) {
 
   var trackComboTables = {
     suffix: probable.createRangeTableFromDict({
-      nobleSuffixes: 10,
-      windSuffixes: 3,
+      nobleSuffixes: 4,
+      windSuffixes: 2,
       seasonSuffixes: 2,
       landscapeSuffixes: 2,
-      beastSuffixes: 1
+      beastSuffixes: 1,
+      sunsetSuffixes: 1,
+      suitSuffixes: 1,
+      cardinalVirtueSuffixes: 1
     })
   };
 
