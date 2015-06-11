@@ -1,14 +1,15 @@
 {
   "masterTrackPrefixes": [
     ["Expert", "Senior", "Professional"],
-    ["Chief", "Prime"],
+    ["Distinguished", "Chief", "Prime"],
     ["Master", "Champion"],
     ["Grandmaster", "Head"]
   ],
   "archPrefixes": [
-    ["High", "Superior"],
+    ["High", "Superior", "Exalted"],
     ["Arch", "Grand", "Principal"],
-    ["The Great", "The Number One"]
+    ["Renowned", "Legendary", "Immortal"],
+    ["The Illustrious", "The Great", "The Number One", "Lifetime-Achievement-Award-Winning"]
   ],
   "spacePrefixes": [
     ["Moon", "Space"],
