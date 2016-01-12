@@ -21,7 +21,8 @@ var suffixProbs = {
   rightExertionsSuffixes: 1,
   arupajhanaSuffixes: 1,
   divineAbidingsSuffixes: 1,
-  fourHorsemenSuffixes: 1
+  fourHorsemenSuffixes: 1,
+  aspicSuffixes: 1
 };
 
 function resolveTrackChoices(probable) {

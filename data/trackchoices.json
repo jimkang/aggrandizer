@@ -101,5 +101,11 @@
     ["of War"],
     ["of Famine"],
     ["of Death"]
+  ],
+  "aspicSuffixes": [
+    ["of Suspension", "of Molding"],
+    ["of Chunks"],
+    ["of Quivering", "of Gentle Quivering"],
+    ["of Goo"]
   ]
 }
