@@ -27,6 +27,7 @@
     "jsonfile": "^2.0.0",
     "lodash": "^3.5.0",
     "probable": "^1.4.0",
-    "seedrandom": "^2.3.11"
+    "seedrandom": "^2.3.11",
+    "tape": "^4.6.0"
   }
 }
